@@ -10,13 +10,13 @@ const Auth = {
   async signInWithGoogle() {
     return sb.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: window.location.origin }
+      options: { redirectTo: 'https://trackmeta.github.io/Track-Finanzas/' }
     });
   },
   async signInWithEmail(email) {
     return sb.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: window.location.origin }
+      options: { emailRedirectTo: 'https://trackmeta.github.io/Track-Finanzas/' }
     });
   },
   async signOut() { return sb.auth.signOut(); },
